@@ -10,5 +10,12 @@ python:
 install:
   - pip install -r requirements_dev.txt
 script:
+<<<<<<< HEAD
   - pycodestyle src/*py --ignore=E501
   - pytest 
+=======
+  - pytest src/test_*.py --cov=handler
+  - pycodestyle src/*py --ignore=E501
+after_success:
+  - coveralls
+>>>>>>> origin/step3
